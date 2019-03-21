@@ -13,3 +13,9 @@ paste this in terminal :
 git clone https://github.com/Surya0023/wifidoser.git
 
 or you can direct downoad
+
+use:
+cd wifidoser
+ls
+./wifidoser.sh
+now do as directed in programme.
