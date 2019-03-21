@@ -1,4 +1,6 @@
 # wifidoser
+Author : Surajchavda
+
 With Technical Sagar.
 Most powerfull Wifi Jammer with fixes.
 Supported Os:Kali linux, Parrot Os, and Some linuxes.
