@@ -18,6 +18,7 @@ or you can direct downoad
 
 use:
 cd wifidoser
+chmod +x wifidoser.sh
 ls
 ./wifidoser.sh
 now do as directed in programme.
