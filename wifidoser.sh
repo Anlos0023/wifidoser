@@ -24,7 +24,7 @@ echo -e ""
 echo -e "Author:- Anlos"
 echo -e "Owner :- Anlos"
 echo -e "Script:- Anlos"
-echo -e "$blue$bln __@Copyrighted__Powerful Wifi Jammer By SurajChavda\e[5m(Anon)$nc" 
+echo -e "$blue$bln __@Copyrighted__Powerful Wifi Jammer By Anlos\e[5m(Anon)$nc" 
 echo -e ""                                              
 read -p $'\033[1;34m[*]PRESS ENTER START WIFI JAMMING/DOSING\033[0m'
 
