@@ -1,9 +1,8 @@
 # wifidoser
-Author : Surajchavda
+Author : Me😅
 
-With Technical Sagar.
-Most powerfull Wifi Jammer with fixes.
-Supported Os:Kali linux, Parrot Os, and Some linuxes.
+Most powerfull Wifi Jammer
+Supported Os:Kali linux, Parrot Os, and Some linux systems
 Features:
 * Any Wifi,Routers,Adapters,Hostpots jamming in this Programme,
 * Very easy To use 
